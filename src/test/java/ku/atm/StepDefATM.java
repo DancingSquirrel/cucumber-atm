@@ -69,5 +69,16 @@ public class StepDefATM {
         assertEquals(balance,
                      bank.getCustomer(id).getAccount().getBalance());
     }
+    // deposit
+    // Tirawat Pongpratisonthi 6410450958
+    @When("I deposit {float} to my account")
+    public  void i_deposit_to_my_account_id(double amount) {
+        atm.deposit(amount);
+    }
 
+    @Then("I deposit {float}")
+    public void i_deposit(double balance) {
+        assertEquals(balance,
+                atm.getBalance());
+    }
 }
