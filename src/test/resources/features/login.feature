@@ -4,12 +4,12 @@ Feature: login
     so that I can do transactions
 
 Background:
-    Given a customer with id 1 and pin 111 exists
+    Given a customer with id 69 and pin 1234 exists
 
 Scenario: Correct id and pin
-    When I login to ATM with id 1 and pin 111
+    When I login to ATM with id 69 and pin 1234
     Then I can login
 
 Scenario: Incorrect pin
-    When I login to ATM with id 1 and pin 222
+    When I login to ATM with id 69 and pin 1233
     Then I cannot login
